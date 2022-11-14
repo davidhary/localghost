@@ -4,6 +4,8 @@
 Segítségével más, vagy akár több operációs rendszer is futtatható egy fizikai számítógépen egyidőben. Ez lehetőséget ad arra, hogy szolgáltatásokat, programokat kipróbálhassunk anélkül, hogy a saját fizikai számítógépünkön futtatnánk. Lehetőségünk van hálózati szegmentációra is, így akár egy komplett infrastruktúra beüzemelésére is alkalmas lehet.  
 A pillanatkép (snapshot) funkció pedig lehetőséget ad arra, hogy egy bizonyos pontra bármikor visszatérhessünk pl egy update, driver, program, kernel telepítés előtti állapotra. Ezzel viszont csak óvatosan bánjunk, mert ilyenkor minden változtatásnak 'nyoma marad' a diszken és hamar elfogyhat a szabad helykapacitás.
 
+![Virtualization](resources/virtualization.png)
+
 ## Mi az a virtualizáció?
 Virtualizáció során egy erre a feladatra megírt program (hypervisor) segítségével a fizikai gépünk erőforrásait ki tudjuk ajánlani egy vagy több virtuális számítógépnek. Ilyen erőforrás jellemzően processzoridő (CPU mag), memória, diszk tárterület, hálózati csatoló. Lehetőségünk van egyéb eszközöket is megoszatni a virtuális gépünkkel, például PCI-e kártyák, USB eszközök, monitorok stb.  
 A terminiológia szerint amelyik gépen végezzük a virtualizálást és az erőforrásait kiajánljuk azt host (gazda) gépnek, a virtuális gépeket pedig guest (vendég) gépeknek is szokás nevezni.  
