@@ -39,14 +39,18 @@ Letöltés: https://www.virtualbox.org/wiki/Downloads
   - Virtuális merevlemezek és ISO file-ok tára
 
 ### Hálózati megoldások
-  - NAT: ilyenkor minden guest gép egyedül bekerül egy NAT alá, ilyenkor csak a host géppel tud kommunikálni, illetve az internet irányába. IP cím adott, a DHCP server funkció nem kikapcsolható. Port forward lehetőség van. *[Ez az alapértelmezett csatoló a VirtalBox-ban.]*  
+  - NAT: ilyenkor minden guest gép egyedül bekerül egy NAT alá, ilyenkor csak az internetet éri el. Se a host géppel, se másik virtuális géppel nem tud kommunikálni. IP cím adott, a DHCP server funkció nem kikapcsolható. Port forward lehetőség van. *[Ez az alapértelmezett csatoló a VirtalBox-ban.]*  
   ![VirtualBox NAT](resources/virtualbox_nat.png)
+
   - Bridged Adapter: a guest gép ugyanolyan hálózati elérhetőséget kap, mint bármely gép a host gép hálózatán.  
   ![VirtualBox Bridged Adapter](resources/virtualbox_bridged.png)
-  - NAT network: több ilyen NAT hálózat hozható létre, az azonos hálózatban lévő eszközök egymással, és a host géppel kommuniálhatnak, illetve az internet irányába, de másik NAT hálózatot nem érnek el. Az IP cím tartomány és a DHCP server funkció állítható. Port forwarding lehetőség van.  
+
+  - NAT network: több ilyen NAT hálózat hozható létre. Az azonos hálózatban lévő eszközök kizárólag egymással, és az internet irányába tudnak kommuniálni, de másik NAT hálózatot, se a host gépet nem érik el. Az IP cím tartomány és a DHCP server funkció állítható. Port forwarding lehetőség van.  
   ![VirtualBox NAT network](resources/virtualbox_nat_network.png)
+
   - Host Network manager (Host only adapter): több ilyen host only adapter hozható létre, ilyenkor az azonos adapteren lévő guest gépek egymással kommunikálhatnak, illetve a host géppel, de más adapteren lévő gépekkel nem. IP cím tartomány és DHCP funkció állítható. Port forward lehetőség nincs.  
   ![VirtualBox Host-only Adapter](resources/virtualbox_host_only.png)  
+
 Egy virtuális gépnek természetesen több hálózati csatolója is lehet, amivel több hálózathoz csatlakozhat.
 
 ### Új VM létrehozása  
